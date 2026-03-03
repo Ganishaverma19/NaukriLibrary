@@ -42,10 +42,6 @@
     },
     "fileInfoCollection": [
       {
-        "templateType": "TestCase",
-        "fileName": ".templates\\baseTemplate 1.xaml"
-      },
-      {
         "editingStatus": "InProgress",
         "testCaseId": "36546ff8-f3b4-4978-8faa-cfc4b496c2c2",
         "testCaseType": "TestCase",
