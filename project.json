@@ -40,7 +40,12 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "templateType": "TestCase",
+        "fileName": ".templates\\baseTemplate 1.xaml"
+      }
+    ],
     "saveToCloud": false
   },
   "expressionLanguage": "CSharp",
