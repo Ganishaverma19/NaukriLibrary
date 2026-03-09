@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Saved Jobs  Mynaukri",
+  "Type": "Screen",
+  "Id": "3dFSAhgfoUG-BJRtgcP_iQ",
+  "Reference": "aXOGnPFg2Em_B05Ff3g5WA/3dFSAhgfoUG-BJRtgcP_iQ",
+  "ParentRef": "aXOGnPFg2Em_B05Ff3g5WA/N0xoFyYuZUqAzFAJvxpS1g",
+  "Created": "2026-03-05T11:04:31.1847921Z",
+  "Updated": "2026-03-05T11:04:31.1847921Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,4 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Search_Jobs" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Search_Jobs" this:Search_Jobs.int_reportID="0" this:Search_Jobs.Location="Bengaluru" this:Search_Jobs.Job1="QA" this:Search_Jobs.jobName="Software Engineer I - QA Manual" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ar="clr-namespace:atuipath_utilities.Report;assembly=atuipath_utilities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="suiteID" Type="InArgument(x:String)" />
+    <x:Property Name="testID" Type="InArgument(x:String)" />
+    <x:Property Name="int_reportID" Type="InArgument(x:Int32)" />
+    <x:Property Name="Location" Type="InArgument(x:String)" />
+    <x:Property Name="Job1" Type="InArgument(x:String)" />
+    <x:Property Name="jobName" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -22,6 +32,107 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>atuipath_utilities.Report</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>ReporterForUiPath.Enums</x:String>
+      <x:String>ReporterForUiPath.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Microsoft.Win32.SafeHandles</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Configuration.Assemblies</x:String>
+      <x:String>System.CodeDom.Compiler</x:String>
+      <x:String>System.Buffers</x:String>
+      <x:String>System.Buffers.Text</x:String>
+      <x:String>System.Buffers.Binary</x:String>
+      <x:String>System.Threading</x:String>
+      <x:String>System.Threading.Tasks</x:String>
+      <x:String>System.Threading.Tasks.Sources</x:String>
+      <x:String>System.Text.Unicode</x:String>
+      <x:String>System.Security.Principal</x:String>
+      <x:String>System.Security.Permissions</x:String>
+      <x:String>System.Security.Cryptography</x:String>
+      <x:String>System.Runtime</x:String>
+      <x:String>System.Runtime.Remoting</x:String>
+      <x:String>System.Runtime.ExceptionServices</x:String>
+      <x:String>System.Runtime.ConstrainedExecution</x:String>
+      <x:String>System.Runtime.Versioning</x:String>
+      <x:String>System.Runtime.Loader</x:String>
+      <x:String>System.Runtime.Intrinsics</x:String>
+      <x:String>System.Runtime.Intrinsics.Wasm</x:String>
+      <x:String>System.Runtime.Intrinsics.Arm</x:String>
+      <x:String>System.Runtime.Intrinsics.X86</x:String>
+      <x:String>System.Runtime.InteropServices.ObjectiveC</x:String>
+      <x:String>System.Runtime.InteropServices.Marshalling</x:String>
+      <x:String>System.Runtime.InteropServices.ComTypes</x:String>
+      <x:String>System.Runtime.CompilerServices</x:String>
+      <x:String>System.Resources</x:String>
+      <x:String>System.Reflection.Metadata</x:String>
+      <x:String>System.Reflection.Emit</x:String>
+      <x:String>System.IO.Enumeration</x:String>
+      <x:String>System.Diagnostics.SymbolStore</x:String>
+      <x:String>System.Diagnostics.Contracts</x:String>
+      <x:String>System.Diagnostics.CodeAnalysis</x:String>
+      <x:String>System.Diagnostics.Tracing</x:String>
+      <x:String>System.Collections.Concurrent</x:String>
+      <x:String>Internal</x:String>
+      <x:String>System.CodeDom</x:String>
+      <x:String>Microsoft.CSharp</x:String>
+      <x:String>System.Linq.Expressions.Interpreter</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>UiPath.Workflow.Runtime</x:String>
+      <x:String>System.Activities.Tracking</x:String>
+      <x:String>System.Activities.Statements.Tracking</x:String>
+      <x:String>System.Activities.Runtime</x:String>
+      <x:String>System.Activities.Runtime.DurableInstancing</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Activities.ParallelTracking</x:String>
+      <x:String>System.Activities.Hosting</x:String>
+      <x:String>System.Activities.Persistence</x:String>
+      <x:String>System.Activities.DurableInstancing</x:String>
+      <x:String>System.ComponentModel.Design.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Security.Authentication.ExtendedProtection</x:String>
+      <x:String>System.Timers</x:String>
+      <x:String>System.ComponentModel.Design</x:String>
+      <x:String>System.Xml.Schema</x:String>
+      <x:String>System.Xml.Xsl</x:String>
+      <x:String>System.Xml.Xsl.Runtime</x:String>
+      <x:String>System.Xml.XPath</x:String>
+      <x:String>System.Xml.Resolvers</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.FileIO</x:String>
+      <x:String>System.Security.Authentication</x:String>
+      <x:String>System.Net.Cache</x:String>
+      <x:String>System.Net.NetworkInformation</x:String>
+      <x:String>System.Net.Security</x:String>
+      <x:String>System.Net.Sockets</x:String>
+      <x:String>UiPath.UIAutomationNext</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -48,13 +159,554 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>atuipath_utilities</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Design</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography</AssemblyReference>
+      <AssemblyReference>System.Security.Principal.Windows</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.IO.MemoryMappedFiles</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Registry</AssemblyReference>
+      <AssemblyReference>System.IO.Pipes</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Threading.AccessControl</AssemblyReference>
+      <AssemblyReference>System.Threading</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Parallel</AssemblyReference>
+      <AssemblyReference>System.Text.Encodings.Web</AssemblyReference>
+      <AssemblyReference>System.Security.Claims</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.Pkcs</AssemblyReference>
+      <AssemblyReference>System.Security.Cryptography.ProtectedData</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.VisualC</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Resources.Writer</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.StackTrace</AssemblyReference>
+      <AssemblyReference>System.Collections.Concurrent</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Net.Security</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>System.Net.NetworkInformation</AssemblyReference>
+      <AssemblyReference>System.Net.Ping</AssemblyReference>
+      <AssemblyReference>System.Net.Sockets</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search_Jobs" sap:VirtualizedContainerService.HintSize="713,417.65666666666664" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="717,8013" sap2010:WorkflowViewState.IdRef="Sequence_60">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <If sap:VirtualizedContainerService.HintSize="695,459" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">int_reportID == 0</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_77">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="416,162" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportName="Searchjobs">
+            <ra:CreateReport.ReportLocation>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">@"C:\Users\Testing\Documents\UiPath\NaukriLibrary\Reports\SearchJobs"</CSharpValue>
+              </InArgument>
+            </ra:CreateReport.ReportLocation>
+            <ra:CreateReport.isCreated>
+              <OutArgument x:TypeArguments="x:Int32">
+                <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">int_reportID</CSharpReference>
+              </OutArgument>
+            </ra:CreateReport.isCreated>
+          </ra:CreateReport>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_78">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="695,118" sap2010:WorkflowViewState.IdRef="StartSuite_1" SuiteName="Search jobs">
+      <ra:StartSuite.ReportId>
+        <InArgument x:TypeArguments="x:Int32">
+          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">int_reportID</CSharpValue>
+        </InArgument>
+      </ra:StartSuite.ReportId>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ra:StartSuite.suiteId>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">suiteID</CSharpReference>
+        </OutArgument>
+      </ra:StartSuite.suiteId>
+    </ra:StartSuite>
+    <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="695,118" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" TestName="search jobs">
+      <ra:StartTest.ReportId>
+        <InArgument x:TypeArguments="x:Int32">
+          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">int_reportID</CSharpValue>
+        </InArgument>
+      </ra:StartTest.ReportId>
+      <ra:StartTest.SuiteId>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">suiteID</CSharpValue>
+        </InArgument>
+      </ra:StartTest.SuiteId>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ra:StartTest.testId>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">testID</CSharpReference>
+        </OutArgument>
+      </ra:StartTest.testId>
+    </ra:StartTest>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="695,7295" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" IsDisplayNameAuto="True" ScopeGuid="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="693,7101" sap2010:WorkflowViewState.IdRef="Sequence_61">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Enrol for freeEnrol bef…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="659,1408" sap2010:WorkflowViewState.IdRef="NCheckState_15" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,819" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info">
+                    <ui:LogMessage.Message>
+                      <InArgument x:TypeArguments="x:Object">
+                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">"Pop up occur"</CSharpValue>
+                      </InArgument>
+                    </ui:LogMessage.Message>
+                  </ui:LogMessage>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'IMG'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_57" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="9f1fd75c-24e1-4a5c-8300-24b118c562f1" DesignTimeRectangle="1018, 199, 24, 24" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='portal' tag='IMG' /&gt;" Guid="18e3f65a-41df-42f1-a5fb-892d299ce5a3" InformativeScreenshot="29da17d96f78fbcc0c775cb7f844d620.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ar:passedStep DisplayName="passedStep" sap:VirtualizedContainerService.HintSize="416,378" sap2010:WorkflowViewState.IdRef="passedStep_16" str_in_actualStep="Pop up is handled" str_in_expectedStep="Pop up should be handles" str_in_stepDescription="if Pop up occur it is handled" str_in_stepName="Pop up ">
+                    <ar:passedStep.str_in_reportId>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">int_reportID</CSharpValue>
+                      </InArgument>
+                    </ar:passedStep.str_in_reportId>
+                    <ar:passedStep.str_in_testId>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">testID</CSharpValue>
+                      </InArgument>
+                    </ar:passedStep.str_in_testId>
+                  </ar:passedStep>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info">
+                    <ui:LogMessage.Message>
+                      <InArgument x:TypeArguments="x:Object">
+                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">"Pop up is handled Successfully"</CSharpValue>
+                      </InArgument>
+                    </ui:LogMessage.Message>
+                  </ui:LogMessage>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" DesignTimeRectangle="324, 183, 735, 510" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='portal' tag='DIV' idx='4' /&gt;" Guid="bbfb1716-e2d4-4686-9eab-d4f2fe50cf8f" InformativeScreenshot="a76028d1fb65e1dcacecc44b7caf3b35.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search jobs here'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="659,270" sap2010:WorkflowViewState.IdRef="NClick_48" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="c82a2fab-3426-40cd-99e3-f57824eea5e4" DesignTimeRectangle="673, 110, 228, 40" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='root' tag='DIV' idx='34' /&gt;" Guid="71683a56-99b4-48f4-a89c-88212f798bc0" InformativeScreenshot="49da834bed8b51b269e66ecd0ba3baa3.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="c67eba45-4784-45ee-9ac3-5b43f03829d6" DesignTimeRectangle="673, 110, 228, 40" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='root' tag='DIV' idx='34' /&gt;" Guid="f1f9df45-169a-48f1-b94b-99764d61fb34" InformativeScreenshot="9c655b503a9a5a3b0f90cf554ca8c014.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="659,198" sap2010:WorkflowViewState.IdRef="NClick_49" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="dfbad957-2bf7-4b29-bf36-ae9ab3d80d0b" DesignTimeRectangle="526, 224, 295, 56" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' idx='2' /&gt;" Guid="0064a05f-68f5-4da0-be6a-4de7d3745865" InformativeScreenshot="c666def51a22641211286592cfaa6164.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="659,302" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="DebuggerApi" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="31698882-ae16-44b2-b061-ceef04657158" DesignTimeRectangle="526, 224, 295, 56" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' placeholder='Enter keyword / designation / companies' /&gt;" Guid="77b8ea21-ba8a-468d-97aa-f780feacd067" InformativeScreenshot="c666def51a22641211286592cfaa6164.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">Job1</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.ExpectedText>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">Job1</CSharpValue>
+                    </InArgument>
+                  </uix:VerifyExecutionTypeIntoOptions.ExpectedText>
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="659,198" sap2010:WorkflowViewState.IdRef="NClick_50" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="1167175c-6fd8-443b-b6ed-5315cdb9032d" DesignTimeRectangle="441, 188, 26, 26" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SPAN' idx='21' /&gt;" Guid="57947ed2-e955-4ae6-872a-8b6fe38be284" InformativeScreenshot="b247d5b5562dc27499df6f61a3e17621.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Job'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="659,198" sap2010:WorkflowViewState.IdRef="NClick_51" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="4e79f385-c987-413f-a955-b409141f3394" DesignTimeRectangle="303, 272, 24, 17" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*' parentid='sa-dd-scrolljobType' tag='SPAN' idx='2' /&gt;" Guid="fb3af91e-e550-4658-92c2-074d7dc28ae4" InformativeScreenshot="51ef9d5c5fae2d75f42f7714b85f479c.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="659,270" sap2010:WorkflowViewState.IdRef="NClick_52" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="85d2d137-1f66-4d48-b241-723d4295dcf5" DesignTimeRectangle="862, 172, 178, 56" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tabindex='0' tag='INPUT' placeholder='Enter location' /&gt;" Guid="421e5666-7248-47dd-b59d-3d3c5ae43143" InformativeScreenshot="37af4782416a9920f729d590b5d182ed.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Verification target" IsLoose="True" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="509c85c8-9c82-4490-b9fb-2dfd32cb7003" DesignTimeRectangle="862, 172, 178, 56" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tabindex='0' tag='INPUT' placeholder='Enter location' /&gt;" Guid="4ca8bf81-6938-44bb-b366-ca73269e8095" InformativeScreenshot="1628016dbbb2e2143adde41cde2880fb.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="659,302" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="DebuggerApi" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="faeff6e9-060f-497e-ae4d-924370bfcaaf" DesignTimeRectangle="862, 172, 178, 56" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' placeholder='Enter location' /&gt;" Guid="6bb396fc-330c-45d0-bbb6-94d6dc7d8f30" InformativeScreenshot="69036b13705d090c4bfb31565d37d8b0.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">Location</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.ExpectedText>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">Location</CSharpValue>
+                    </InArgument>
+                  </uix:VerifyExecutionTypeIntoOptions.ExpectedText>
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="659,198" sap2010:WorkflowViewState.IdRef="NClick_53" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="22f89725-1fad-4fcd-baed-1e6b519f276b" DesignTimeRectangle="1078, 190, 48, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Search' tag='SPAN' check:innerText='Search' /&gt;" Guid="880c979f-eac1-4ed7-bf40-5207c9d5a230" InformativeScreenshot="38bfaf7ba8b8f5ee1a240e94c36ef25d.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay DisplayName="Delay" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="659,127" sap2010:WorkflowViewState.IdRef="Delay_6" />
+            <uix:NCheckState DisplayName="Check App State '{&quot;@context&quot;:&quot;https://sc…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="659,1564" sap2010:WorkflowViewState.IdRef="NCheckState_16" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,767" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Quality Assurance Engin…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_55" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8adc39aa-6fcd-49ed-b347-aef7ffd7bc5e" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="naukri.com/qa-jobs-in-bengaluru" CVScreenId="70518d89-3128-4b99-ab3b-afdc40f07125" DesignTimeRectangle="448, 270, 432, 22" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="10682a70-ba4b-46d8-9d97-091069417498" InformativeScreenshot="00bf1e2a7582b02a589af5eb20a27406.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Qa Jobs In Bengaluru - 1342 Qa Job Vacancies In Bengaluru - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+                        <uix:TargetAnchorable.FullSelectorArgument>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">string.Format("&lt;webctrl parentid='listContainer' tag='A' aaname='{0}' /&gt;", jobName)</CSharpValue>
+                          </InArgument>
+                        </uix:TargetAnchorable.FullSelectorArgument>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                  <ar:passedStep DisplayName="passedStep" sap:VirtualizedContainerService.HintSize="416,378" sap2010:WorkflowViewState.IdRef="passedStep_18" str_in_actualStep="Job is searched and able to view all relevant jobs" str_in_expectedStep="Job should be searched and able to view all relevant jobs" str_in_stepDescription="Job is searched" str_in_stepName="Search Jobs">
+                    <ar:passedStep.str_in_reportId>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">int_reportID</CSharpValue>
+                      </InArgument>
+                    </ar:passedStep.str_in_reportId>
+                    <ar:passedStep.str_in_testId>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">testID</CSharpValue>
+                      </InArgument>
+                    </ar:passedStep.str_in_testId>
+                  </ar:passedStep>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,442" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ar:failedStep DisplayName="failedStep" sap:VirtualizedContainerService.HintSize="416,378" sap2010:WorkflowViewState.IdRef="failedStep_11" str_in_actualStep="Failed to search job and not able to view all relevant jobs" str_in_expectedStep="Job should be searched and able to view all relevant jobs" str_in_stepDescription="Fail to display searched job" str_in_stepName="Search Job">
+                    <ar:failedStep.str_in_reportId>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">int_reportID</CSharpValue>
+                      </InArgument>
+                    </ar:failedStep.str_in_reportId>
+                    <ar:failedStep.str_in_testId>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">testID</CSharpValue>
+                      </InArgument>
+                    </ar:failedStep.str_in_testId>
+                  </ar:failedStep>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="naukri.com/qa-jobs-in-bengaluru" DesignTimeRectangle="124, -2738, 1120, 6298" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='search-result-container' tag='DIV' /&gt;" Guid="a86a0c17-a842-4eee-bc77-dc4b95da54e6" InformativeScreenshot="736773f58b6496d14e577c570eb90bad.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Qa Jobs In Banglore - 1341 Qa Job Vacancies In Banglore - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Software Engineer I - QA Manual - Bengaluru - Urbanpiper - 0 to 3 years of exper" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="659,2002" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" IsDisplayNameAuto="True" ScopeGuid="092ca377-6acf-41c6-b86c-d9e0ba5f1602" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="657,1804" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="623,255" sap2010:WorkflowViewState.IdRef="NClick_58" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="092ca377-6acf-41c6-b86c-d9e0ba5f1602" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="naukri.com/job-listings-software-engineer-i-qa-manual-urbanpiper-bengaluru-0-to-3-years-260325500877" CVScreenId="ef2bb58c-43c7-499d-9677-8a70dfc3c694" DesignTimeRectangle="532, 411, 86, 40" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='job_header' tag='BUTTON' /&gt;" Guid="7fd829d2-d0f9-41bb-ac1b-db6f8d46eee1" InformativeScreenshot="e6a10a0c72b992827182b12dc8fdaaac.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Software Engineer I - QA Manual - Bengaluru - Urbanpiper - 0 to 3 years of experience' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Saved jobs'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="623,255" sap2010:WorkflowViewState.IdRef="NClick_62" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="092ca377-6acf-41c6-b86c-d9e0ba5f1602" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="naukri.com/job-listings-software-engineer-i-qa-manual-urbanpiper-bengaluru-0-to-3-years-260325500877" CVScreenId="101cfd7c-818e-4b12-8e6a-ff6218e6c765" DesignTimeRectangle="585, 329, 68, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Saved jobs' parentid='root' tag='DIV' /&gt;" Guid="1e143580-b810-4fde-b4d6-4fdc8d172018" InformativeScreenshot="9365d7371fe8dd39645dfff538602281.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Software Engineer I - QA Manual - Bengaluru - Urbanpiper - 0 to 3 years of experience' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NCheckState DisplayName="Check App State 'Software Engineer I - Q…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="623,1230" sap2010:WorkflowViewState.IdRef="NCheckState_18" ScopeIdentifier="092ca377-6acf-41c6-b86c-d9e0ba5f1602" Version="V5">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,442" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ar:passedStep DisplayName="passedStep" sap:VirtualizedContainerService.HintSize="416,378" sap2010:WorkflowViewState.IdRef="passedStep_15" str_in_actualStep="Saved jobs are visible" str_in_expectedStep="Saved jobs should be visible" str_in_stepDescription="Saved jobs should be visible" str_in_stepName="Saved Jobs">
+                            <ar:passedStep.str_in_reportId>
+                              <InArgument x:TypeArguments="x:Int32">
+                                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">int_reportID</CSharpValue>
+                              </InArgument>
+                            </ar:passedStep.str_in_reportId>
+                            <ar:passedStep.str_in_testId>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">testID</CSharpValue>
+                              </InArgument>
+                            </ar:passedStep.str_in_testId>
+                          </ar:passedStep>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,442" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ar:failedStep DisplayName="failedStep" sap:VirtualizedContainerService.HintSize="416,378" sap2010:WorkflowViewState.IdRef="failedStep_10" str_in_actualStep="No Jobs are visible Even after Saved " str_in_expectedStep="Saved jobs should be visible" str_in_stepDescription="Failed to Save job" str_in_stepName="Saved jobs">
+                            <ar:failedStep.str_in_reportId>
+                              <InArgument x:TypeArguments="x:Int32">
+                                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">int_reportID</CSharpValue>
+                              </InArgument>
+                            </ar:failedStep.str_in_reportId>
+                            <ar:failedStep.str_in_testId>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">testID</CSharpValue>
+                              </InArgument>
+                            </ar:failedStep.str_in_testId>
+                          </ar:failedStep>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/savedjobs" CVScreenId="b7f4f51f-a2f7-456f-9115-a0ef0de4c177" DesignTimeRectangle="148, 426, 652, 20" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="77b79f17-10f5-4ac0-92d9-34430d74e3b7" InformativeScreenshot="af4092d0e310e7e0db8d55c48bad2b2b.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Saved Jobs | Mynaukri' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+                          <uix:TargetAnchorable.FullSelectorArgument>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">string.Format("&lt;webctrl aaname='{0}' parentid='root' tag='DIV' /&gt;", jobName)</CSharpValue>
+                            </InArgument>
+                          </uix:TargetAnchorable.FullSelectorArgument>
+                        </uix:TargetAnchorable>
+                      </uix:NCheckState.Target>
+                    </uix:NCheckState>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.CloseMode>
+                <InArgument x:TypeArguments="uix:NAppCloseMode">
+                  <CSharpValue x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">UiPath.UIAutomationNext.Enums.NAppCloseMode.Never</CSharpValue>
+                </InArgument>
+              </uix:NApplicationCard.CloseMode>
+              <uix:NApplicationCard.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                </ActivityFunc>
+              </uix:NApplicationCard.OCREngine>
+              <uix:NApplicationCard.OpenMode>
+                <InArgument x:TypeArguments="uix:NAppOpenMode">
+                  <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+                </InArgument>
+              </uix:NApplicationCard.OpenMode>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 1382, 736" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUzSURBVGhDtZrfbxRVFMf7J/Af4MtsH3yTxkiIRp58MaHx0c62+CJYkED8UZMaqIFGjT+oYlJKxLZWBJR2RRTBSpu0NYKCK5hYEKU2QLARWKEz087Przm3O+vsvbOzM3Nnb/J5OXN35nzvnDPnnts2PbH9ySZZVndgVXOHtlFRjb3NeaOQy2tzOVUr5fI6/keby+X1SZqjqNrG5o6lB/j7pEEwxIWczrUbu8ipakcTUZQVIxjqUXFcWGFpBtMIEQxRNMjxatqNXfxzoxAMYdDK5FS9KDysQSiqNhf3bQgGHiVvdMRZdbV3CUOnbIxN2eg6YArXE6PqpZyqt/L+8AiGILl2jZJUvDnHKwMm+PHbvCvMS0WdkBIMSZ1fv8Pgfa+M98csYX4qIkQIBua8qrcKN6lBZ5+4+v4YP28L89NCocz7GSpgJWHrx7xPlIBzs9Fh1LLJEGw1UfVSWGILAnIqq5jiDWpATtzTPd53NroGxGSm+b2fmExcimQv8v5WOx8z7nm6BpYFEaNT1eFDju8bs6rmpRAAJa/3hApgoRPyg7hQMveOmCxx6ZMatNPnlRdIo3PvsnCfuqh6aXVHaZUggEq5MFkCWnFyPGoEhSYh+BYyWX0ePlRqjbQCgm9hRYCqbRQmpYDChQpY3JFaQOAt+OEjvc+hahxn1YNDRgBt45mALMKns2+Z9y3WkBQACqNMwufGP/HDJjg2dMsJoGaoSclrffyFpKQZVMhaNieoxCGQ7025vCbTErLPZZIxfsGRDh2fZlX7ggQk2jrwRO1G/UHJTQUu0d4nBtT40BdIuJCEKAGNcryCqpcaJoCqcMMcDyAtgL4kwXH1houeIRMPPiPObQTUvMTe+4dBCekP6odf7DfRfdDCywMm1mwS52eNdBKTAGPZwwcFCy/tJ+dNvDZs4o3DFnZ/bKFls/ibrGBJrLCjQPFiXEjARydttuKvHjSxe8TCm0cs9B2z0H/cwrufW3j4uYblwqR0IVu71WCd185BE3tGLLx11MJ7oxb2f2lh8Bsbh76zMTJu46md2Xz7g7BCJruVoGR9od9kbeLbRy22lR44YWPwlI1Pz9g4NmXjxA8Ovj3vsD0T/3sZ2FaCNkT8haQ8ssXA64cs7CtYOPCVheHTNg5P2BidtvH1WYdV36mLDs7Ouuj+MHkbWQvaiJa303LbCWLd8wZLZHL+yISNwozDnD/zs4vpSw5+nHXxyx8u6xfe+SyT8yLW4DMBSn6xJ2RCYh7bZmD4tIXCjI2T58h5BzO/OvjpsouLf7qYnXdx7ZaHm7c9FKZtrJEodBQ+FQEsjCTrgc/j2w3m3ESx7PwVF5euubh83cVc2fnb94DFJaBtT/rE9s+IKk19Vm+BWLvFwPHvbVz4fcX5K9dd/LXg4dYdD3fuA9oSYDtS/cBgVVOf9Vsg1m01MFl0cPWmh/kFD3/f9XB30YO+DNjl/mf9jnQCgid0FQFZvwXi0W0GS96Fkod/NQ+GCTiB5i2NAKWtxsGWTxYNfpCHnjVYEi+ZgFt23m/9kwpQ8voc768goPzXmMxCyYcKmj9SCoh3uMtESFbnWlBzEzx4SSSgxl9rBIOP0pZtPvgERfDXasHHfSwBjRThn2bz9jCinK8rgMip91sbkRMbuutW4ZLy9Eq1jUIwhFE+vZNqfJJhFMMSNgzBEEWjQipAiZ7BPzcKwVCPlc/s4lDIw2VgjtO/MfDPq4dgiAsJKX9uZQrfZFrHfQRDGnwxikrtKfUWwkFBiWzNea1Ac2iujNNB/gOhsBY/JxYPUAAAAABJRU5ErkJggg==" InformativeScreenshot="405a37043af453da15fcdb5522697fdf.jpg" Selector="&lt;html app='chrome.exe' title='Software Engineer I - QA Manual - Bengaluru - Urbanpiper - 0 to 3 years of experience' /&gt;" Url="https://www.naukri.com/job-listings-software-engineer-i-qa-manual-urbanpiper-bengaluru-0-to-3-years-260325500877?src=jobsearchDesk&amp;sid=17727015991836904&amp;xp=1&amp;px=1&amp;nignbevent_src=jobsearchDeskGNB" Version="V2">
+                  <uix:TargetApp.Arguments>
+                    <InArgument x:TypeArguments="x:String" />
+                  </uix:TargetApp.Arguments>
+                  <uix:TargetApp.WorkingDirectory>
+                    <InArgument x:TypeArguments="x:String" />
+                  </uix:TargetApp.WorkingDirectory>
+                </uix:TargetApp>
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.CloseMode>
+        <InArgument x:TypeArguments="uix:NAppCloseMode">
+          <CSharpValue x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">UiPath.UIAutomationNext.Enums.NAppCloseMode.Never</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.CloseMode>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.OpenMode>
+        <InArgument x:TypeArguments="uix:NAppOpenMode">
+          <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.OpenMode>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 736" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUzSURBVGhDtZrfbxRVFMf7J/Af4MtsH3yTxkiIRp58MaHx0c62+CJYkED8UZMaqIFGjT+oYlJKxLZWBJR2RRTBSpu0NYKCK5hYEKU2QLARWKEz087Przm3O+vsvbOzM3Nnb/J5OXN35nzvnDPnnts2PbH9ySZZVndgVXOHtlFRjb3NeaOQy2tzOVUr5fI6/keby+X1SZqjqNrG5o6lB/j7pEEwxIWczrUbu8ipakcTUZQVIxjqUXFcWGFpBtMIEQxRNMjxatqNXfxzoxAMYdDK5FS9KDysQSiqNhf3bQgGHiVvdMRZdbV3CUOnbIxN2eg6YArXE6PqpZyqt/L+8AiGILl2jZJUvDnHKwMm+PHbvCvMS0WdkBIMSZ1fv8Pgfa+M98csYX4qIkQIBua8qrcKN6lBZ5+4+v4YP28L89NCocz7GSpgJWHrx7xPlIBzs9Fh1LLJEGw1UfVSWGILAnIqq5jiDWpATtzTPd53NroGxGSm+b2fmExcimQv8v5WOx8z7nm6BpYFEaNT1eFDju8bs6rmpRAAJa/3hApgoRPyg7hQMveOmCxx6ZMatNPnlRdIo3PvsnCfuqh6aXVHaZUggEq5MFkCWnFyPGoEhSYh+BYyWX0ePlRqjbQCgm9hRYCqbRQmpYDChQpY3JFaQOAt+OEjvc+hahxn1YNDRgBt45mALMKns2+Z9y3WkBQACqNMwufGP/HDJjg2dMsJoGaoSclrffyFpKQZVMhaNieoxCGQ7025vCbTErLPZZIxfsGRDh2fZlX7ggQk2jrwRO1G/UHJTQUu0d4nBtT40BdIuJCEKAGNcryCqpcaJoCqcMMcDyAtgL4kwXH1houeIRMPPiPObQTUvMTe+4dBCekP6odf7DfRfdDCywMm1mwS52eNdBKTAGPZwwcFCy/tJ+dNvDZs4o3DFnZ/bKFls/ibrGBJrLCjQPFiXEjARydttuKvHjSxe8TCm0cs9B2z0H/cwrufW3j4uYblwqR0IVu71WCd185BE3tGLLx11MJ7oxb2f2lh8Bsbh76zMTJu46md2Xz7g7BCJruVoGR9od9kbeLbRy22lR44YWPwlI1Pz9g4NmXjxA8Ovj3vsD0T/3sZ2FaCNkT8haQ8ssXA64cs7CtYOPCVheHTNg5P2BidtvH1WYdV36mLDs7Ouuj+MHkbWQvaiJa303LbCWLd8wZLZHL+yISNwozDnD/zs4vpSw5+nHXxyx8u6xfe+SyT8yLW4DMBSn6xJ2RCYh7bZmD4tIXCjI2T58h5BzO/OvjpsouLf7qYnXdx7ZaHm7c9FKZtrJEodBQ+FQEsjCTrgc/j2w3m3ESx7PwVF5euubh83cVc2fnb94DFJaBtT/rE9s+IKk19Vm+BWLvFwPHvbVz4fcX5K9dd/LXg4dYdD3fuA9oSYDtS/cBgVVOf9Vsg1m01MFl0cPWmh/kFD3/f9XB30YO+DNjl/mf9jnQCgid0FQFZvwXi0W0GS96Fkod/NQ+GCTiB5i2NAKWtxsGWTxYNfpCHnjVYEi+ZgFt23m/9kwpQ8voc768goPzXmMxCyYcKmj9SCoh3uMtESFbnWlBzEzx4SSSgxl9rBIOP0pZtPvgERfDXasHHfSwBjRThn2bz9jCinK8rgMip91sbkRMbuutW4ZLy9Eq1jUIwhFE+vZNqfJJhFMMSNgzBEEWjQipAiZ7BPzcKwVCPlc/s4lDIw2VgjtO/MfDPq4dgiAsJKX9uZQrfZFrHfQRDGnwxikrtKfUWwkFBiWzNea1Ac2iujNNB/gOhsBY/JxYPUAAAAABJRU5ErkJggg==" InformativeScreenshot="26d5bd5c1739b79d5b861db4aec6fd62.jpg" Selector="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" Url="https://www.naukri.com/mnjuser/homepage" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>

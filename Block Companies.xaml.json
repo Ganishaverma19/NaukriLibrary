@@ -1,0 +1,21 @@
+{
+  "DisplayName": "Block Companies",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "BlockCompany",
+      "DisplayName": "BlockCompany",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "American Logistics Group(ALG)",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

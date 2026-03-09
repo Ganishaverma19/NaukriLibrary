@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="TEZMNezQ4k-LUK6umfVibg" Reference="aXOGnPFg2Em_B05Ff3g5WA/djibCaHIMUmzuVvksHddhw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="naukri.com/software-tester-internship-jobs" CVScreenId="8b863145-e921-4538-a084-cb58146c1769" DesignTimeRectangle="183, 313, 132, 18" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="cc4904a7-75d5-41b8-b11c-6c45caeaf8a4" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Software Tester Internship Jobs - 140 Software Tester Internship Job Vacancies In March 2026 - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.FullSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">string.Format("&lt;webctrl aaname='{0}' parentid='search-result-container' tag='SPAN' /&gt;", Filter1)</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FullSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="6b18a3cf8eac5411270e27ae272f31f6.jpg" xmlns="">0Vipn7XKKhEOtcpetf0v-pA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="" Name="Filter1" />
+    </scg:List>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

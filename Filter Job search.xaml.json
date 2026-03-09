@@ -1,0 +1,117 @@
+{
+  "DisplayName": "Filter Job search",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "Job2",
+      "DisplayName": "Job2",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Software Tester",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "JobName",
+      "DisplayName": "JobName",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Software Testing Internship",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "int_reportID",
+      "DisplayName": "int_reportID",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "0",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "testID",
+      "DisplayName": "testID",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "suiteID",
+      "DisplayName": "suiteID",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "FIlter4",
+      "DisplayName": "FIlter4",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "FIlter3",
+      "DisplayName": "FIlter3",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "3 Months",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "Filter2",
+      "DisplayName": "Filter2",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Quality Assurance andTesting",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "Filter1",
+      "DisplayName": "Filter1",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Engineering - Software & QA",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

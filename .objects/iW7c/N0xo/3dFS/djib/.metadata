@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Engineering - Software …",
+  "Type": "Element",
+  "Id": "djibCaHIMUmzuVvksHddhw",
+  "Reference": "aXOGnPFg2Em_B05Ff3g5WA/djibCaHIMUmzuVvksHddhw",
+  "ParentRef": "aXOGnPFg2Em_B05Ff3g5WA/3dFSAhgfoUG-BJRtgcP_iQ",
+  "Created": "2026-03-05T11:04:35.0782235Z",
+  "Updated": "2026-03-05T11:04:35.0782235Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
