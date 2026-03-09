@@ -129,7 +129,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Filter_Job_search" sap:VirtualizedContainerService.HintSize="717,8988" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Filter_Job_search" sap:VirtualizedContainerService.HintSize="717,9384" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -219,13 +219,13 @@
         </OutArgument>
       </ra:StartTest.testId>
     </ra:StartTest>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Saved Jobs  Mynaukri" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="529,8270" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Saved Jobs  Mynaukri" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="529,8666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="527,8076" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="527,8472" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -238,7 +238,7 @@
             </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search jobs here'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="493,198" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V5">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="ae4c9835-4683-4ae1-9a07-d55fb8dd3fd7" DesignTimeRectangle="673, 162, 228, 40" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='nI-gNb-sb__main' parentid='root' visibleinnertext='Search jobs here' /&gt;" Guid="0c6df007-7f4c-4e56-9737-3b08d101e612" InformativeScreenshot="b749880a96ba458820e30846050d361e.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="c0237c5f-e877-4943-abdf-f5d6120af44d" DesignTimeRectangle="673, 162, 228, 40" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='nI-gNb-sb__main' parentid='root' tag='DIV' /&gt;" Guid="1f9f4fc9-aa92-40f8-9480-ca3a2b90cde5" InformativeScreenshot="331a08f0395f7b96dcefc788f8895028.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
               </uix:NClick.Target>
             </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="493,198" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V5">
@@ -281,9 +281,9 @@
                 <uix:TargetAnchorable BrowserURL="naukri.com/mnjuser/homepage" CVScreenId="a15a6114-3460-42d2-8383-7336eb79fa33" DesignTimeRectangle="1080, 190, 48, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Search' tag='SPAN' check:innerText='Search' /&gt;" Guid="8a6370ec-4a50-4d3a-b54b-801979c4e4da" InformativeScreenshot="b6355eb4ce39914900ba2259a26405de.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Fresher Jobs - Resume Builder Service - Interview Preparation - Naukri.com' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'PreparePathfinderNCATEx…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="493,2721" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'PreparePathfinderNCATEx…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="493,3117" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V5">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1924" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,2320" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -324,15 +324,25 @@
                     </uix:NClick.Target>
                   </uix:NClick>
                   <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,230" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="4" ScopeIdentifier="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V5" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Delhi / NCR'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V5">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View More'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_21" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V5">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="naukri.com/software-tester-internship-jobs" CVScreenId="84002b67-d4cb-45d5-be42-32f4cee9fbd0" DesignTimeRectangle="183, 599, 74, 18" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="87735eb4-3e36-45bc-ac83-4f9d31bdda4a" InformativeScreenshot="b8a8afe36c3190cc818e02e4506b8cdd.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Software Tester Internship Jobs - 9 Software Tester Internship Job Vacancies In March 2026 - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+                      <uix:TargetAnchorable BrowserURL="naukri.com/software-tester-internship-jobs" CVScreenId="186f129f-2e41-45f4-9de9-1dc37a8ec40e" DesignTimeRectangle="183, 622, 69, 17" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='cityTypeGid' tag='SPAN' /&gt;" Guid="f0af34fe-25df-424a-af11-88594e9f0de2" InformativeScreenshot="45120d207e429aa3cd4a03a15bdf390f.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Software Tester Internship Jobs - 1 Software Tester Internship Job Vacancies In March 2026 - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Delhi / NCR'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_22" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="naukri.com/software-tester-internship-jobs" CVScreenId="bd41e808-9a24-4473-832c-077a932708d5" DesignTimeRectangle="208, 429, 74, 18" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="6f522f42-5801-4d1c-b78e-fddfc98def46" InformativeScreenshot="304a8c1114af13081d5822265cd55462.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Software Tester Internship Jobs - 1 Software Tester Internship Job Vacancies In March 2026 - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
                         <uix:TargetAnchorable.FullSelectorArgument>
                           <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">string.Format("&lt;webctrl aaname='{0}' parentid='search-result-container' tag='SPAN' /&gt;", FIlter4)</CSharpValue>
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">string.Format("&lt;webctrl parentid='swiperType' tag='SPAN' aaname='{0}' /&gt;", FIlter4)</CSharpValue>
                           </InArgument>
                         </uix:TargetAnchorable.FullSelectorArgument>
                       </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Apply'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="naukri.com/software-tester-internship-jobs" CVScreenId="be8b2c4d-b8c5-48ef-8bff-72b43feabdeb" DesignTimeRectangle="377, 679, 81, 36" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Apply' parentid='tooltip' tag='DIV' /&gt;" Guid="1689a5a5-1637-412a-a5cd-2571b8002e2e" InformativeScreenshot="cdb453fb40411a24cf889d4081f174f1.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Software Tester Internship Jobs - 1 Software Tester Internship Job Vacancies In March 2026 - Naukri.com' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
                     </uix:NClick.Target>
                   </uix:NClick>
                   <uix:NMouseScroll KeyModifiers="{x:Null}" DisplayName="Mouse Scroll" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,230" sap2010:WorkflowViewState.IdRef="NMouseScroll_3" InteractionMode="HardwareEvents" MovementUnits="2" ScopeIdentifier="c3c182f5-4411-4e61-91d8-f81debfe6049" Version="V5">
@@ -554,7 +564,7 @@
       </uix:NApplicationCard.OCREngine>
       <uix:NApplicationCard.OpenMode>
         <InArgument x:TypeArguments="uix:NAppOpenMode">
-          <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+          <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen</CSharpValue>
         </InArgument>
       </uix:NApplicationCard.OpenMode>
       <uix:NApplicationCard.TargetApp>

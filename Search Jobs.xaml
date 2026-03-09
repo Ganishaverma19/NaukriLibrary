@@ -694,7 +694,7 @@
       </uix:NApplicationCard.OCREngine>
       <uix:NApplicationCard.OpenMode>
         <InArgument x:TypeArguments="uix:NAppOpenMode">
-          <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+          <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen</CSharpValue>
         </InArgument>
       </uix:NApplicationCard.OpenMode>
       <uix:NApplicationCard.TargetApp>
